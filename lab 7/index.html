@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="top">
+            <p class="tag">QUICK MATH TOOL</p>
+            <h1>Math Calculator</h1>
+            <p class="intro">Enter your numbers and choose an operation below.</p>
+        </div>
+
+        <div class="input-area">
+            <div class="number-field">
+                <label for="number1">First Number</label>
+                <input type="number" id="number1" placeholder="Enter first number" step="any">
+            </div>
+
+            <div class="number-field">
+                <label for="number2">Second Number</label>
+                <input type="number" id="number2" placeholder="Enter second number" step="any">
+            </div>
+        </div>
+
+        <div class="operation-area">
+            <p class="section-title">Choose Operation</p>
+            <div class="operation-buttons">
+                <button type="button" class="operation-button" data-operation="add">
+                    <span class="operator">+</span>
+                    <span>Addition</span>
+                </button>
+                <button type="button" class="operation-button" data-operation="subtract">
+                    <span class="operator">−</span>
+                    <span>Subtraction</span>
+                </button>
+                <button type="button" class="operation-button" data-operation="multiply">
+                    <span class="operator">×</span>
+                    <span>Multiplication</span>
+                </button>
+                <button type="button" class="operation-button" data-operation="divide">
+                    <span class="operator">÷</span>
+                    <span>Division</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <p class="result-title">YOUR RESULT</p>
+            <p id="result">Your answer will appear here</p>
+        </div>
+
+        <button type="button" id="clearButton" class="clear-button">Clear All</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

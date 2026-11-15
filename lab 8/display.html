@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted User Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-card details-card">
+        <div class="page-heading">
+            <p class="tag">SUBMISSION SUCCESSFUL</p>
+            <h1>User Details</h1>
+            <p>The information entered in the previous page is shown below.</p>
+        </div>
+
+        <div id="detailsTable" class="details-list">
+            <div class="detail-row"><span>Full Name</span><strong id="showName"></strong></div>
+            <div class="detail-row"><span>Gender</span><strong id="showGender"></strong></div>
+            <div class="detail-row"><span>Mobile Number</span><strong id="showMobile"></strong></div>
+            <div class="detail-row"><span>Email ID</span><strong id="showEmail"></strong></div>
+            <div class="detail-row"><span>City</span><strong id="showCity"></strong></div>
+            <div class="detail-row"><span>State</span><strong id="showState"></strong></div>
+            <div class="detail-row"><span>Country</span><strong id="showCountry"></strong></div>
+        </div>
+
+        <p id="emptyMessage" class="empty-message" hidden>
+            No user details were found. Please fill in the form first.
+        </p>
+
+        <div class="button-row">
+            <a href="index.html" class="back-button">Back to Form</a>
+        </div>
+    </div>
+
+    <script src="display.js"></script>
+</body>
+</html>

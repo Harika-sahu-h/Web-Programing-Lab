@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive Product Offers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">PRODUCT CATALOGUE</p>
+      <h1>Exclusive Product Offers</h1>
+      <p class="subtitle">Compare product details, brands and prices in one place.</p>
+    </div>
+    <div class="header-mark" aria-hidden="true">✦</div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Product table controls">
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search products, brands or descriptions..." autocomplete="off">
+      </label>
+      <label class="filter-control">
+        <span>Category</span>
+        <select id="categoryFilter">
+          <option value="all">All categories</option>
+        </select>
+      </label>
+      <label class="filter-control">
+        <span>Sort by</span>
+        <select id="sortSelect">
+          <option value="default">Featured</option>
+          <option value="price-low">Price: low to high</option>
+          <option value="price-high">Price: high to low</option>
+          <option value="name">Product name</option>
+        </select>
+      </label>
+      <button id="resetButton" class="reset-button" type="button">Reset</button>
+    </section>
+
+    <div class="table-heading">
+      <div>
+        <h2>Available products</h2>
+        <p id="resultCount" aria-live="polite">Showing products</p>
+      </div>
+      <span class="table-note">Prices shown in Indian Rupees (₹)</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Product</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="productTableBody">
+          <tr><td colspan="6" class="loading-cell">Loading products…</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="footnote">Student lab demonstration catalogue. Product details and prices are sample data.</p>
+  </main>
+
+  <dialog id="productDialog" class="product-dialog">
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="Close details">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <footer>Product Information Website · Lab Experiment 2</footer>
+  <script src="script.js"></script>
+</body>
+</html>

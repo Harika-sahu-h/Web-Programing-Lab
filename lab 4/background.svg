@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b8d8d4"/><stop offset=".6" stop-color="#f3e9ce"/><stop offset="1" stop-color="#d3dfc3"/></linearGradient>
+ <linearGradient id="hill" x2="0" y2="1"><stop stop-color="#9db89a"/><stop offset="1" stop-color="#496f50"/></linearGradient>
+ <linearGradient id="forest" x2="0" y2="1"><stop stop-color="#527d5c"/><stop offset="1" stop-color="#1d4932"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="1260" cy="190" r="100" fill="#fff2d5" opacity=".45"/>
+<path d="M0 470 L190 350 350 450 540 300 760 470 960 320 1160 470 1380 300 1600 440 V900 H0Z" fill="#b0c5a7" opacity=".8"/>
+<path d="M0 570 L210 405 390 545 610 370 830 550 1070 380 1290 535 1490 390 1600 470 V900 H0Z" fill="url(#hill)"/>
+<path d="M0 650 Q250 500 480 635 T900 610 T1300 590 T1600 620 V900 H0Z" fill="#648b68"/>
+<path d="M0 735 Q260 600 520 730 T1000 685 T1600 720 V900 H0Z" fill="url(#forest)"/>
+<g fill="#254e35" opacity=".85">
+ <ellipse cx="30" cy="40" rx="95" ry="35" transform="rotate(25 30 40)"/>
+ <ellipse cx="130" cy="22" rx="85" ry="30" transform="rotate(15 130 22)"/>
+ <ellipse cx="230" cy="42" rx="80" ry="28" transform="rotate(35 230 42)"/>
+ <ellipse cx="1510" cy="825" rx="100" ry="38" transform="rotate(-30 1510 825)"/>
+ <ellipse cx="1410" cy="875" rx="90" ry="35" transform="rotate(-18 1410 875)"/>
+</g>
+<g fill="#71966d" opacity=".8">
+ <ellipse cx="75" cy="90" rx="48" ry="18" transform="rotate(25 75 90)"/>
+ <ellipse cx="190" cy="75" rx="48" ry="18" transform="rotate(-20 190 75)"/>
+ <ellipse cx="1470" cy="780" rx="52" ry="19" transform="rotate(-25 1470 780)"/>
+</g>
+</svg>

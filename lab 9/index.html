@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Book Data Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p class="tag">LAB EXERCISE 9</p>
+        <h1>Book Catalogue</h1>
+        <p class="subtitle">Read book information from an XML file and display it in a table.</p>
+
+        <div class="controls">
+            <button type="button" onclick="loadXML()">Load books.xml</button>
+            <label class="file-button" for="xmlFile">Choose XML File</label>
+            <input type="file" id="xmlFile" accept=".xml,text/xml,application/xml">
+        </div>
+        <p id="status" role="status">Click “Load books.xml” if using Live Server, or choose the XML file to work offline.</p>
+
+        <div class="table-wrapper">
+            <table id="bookTable" hidden>
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Category</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Price ($)</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <p class="footer-note">Data is read from XML using JavaScript and DOMParser.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

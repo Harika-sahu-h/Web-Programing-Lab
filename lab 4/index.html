@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country and Capital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-card">
+        <div class="globe">◎</div>
+        <h1>Country and Capital</h1>
+        <div class="title-line"></div>
+        <p class="intro">Select a country from the list to view its capital and a simple fact.</p>
+
+        <div class="info-area">
+            <div class="country-area">
+                <label for="country">Select a Country:</label>
+                <select id="country">
+                    <option value="India">India</option>
+                    <option value="USA">United States</option>
+                    <option value="Japan">Japan</option>
+                    <option value="France">France</option>
+                    <option value="Australia">Australia</option>
+                </select>
+            </div>
+
+            <div class="details-area">
+                <div class="detail-row">
+                    <div class="detail-icon">⌖</div>
+                    <div class="detail-content">
+                        <h3>Capital:</h3>
+                        <p class="capital-name" id="capital">New Delhi</p>
+                    </div>
+                </div>
+
+                <div class="detail-row fact-row">
+                    <div class="detail-icon book-icon">▤</div>
+                    <div class="detail-content fact-box">
+                        <h3>Fact:</h3>
+                        <p id="fact">The Taj Mahal is located in India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

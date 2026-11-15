@@ -1,0 +1,408 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #17385c;
+    background-color: #f2f6fb;
+}
+
+
+/* Scrolling announcement message */
+.announcement-bar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 18px 7% 0;
+    padding: 11px 16px;
+    overflow: hidden;
+    color: #153d68;
+    background: rgba(235, 246, 255, 0.94);
+    border-left: 4px solid #62a8df;
+    border-radius: 6px;
+}
+
+.announcement-label {
+    flex-shrink: 0;
+    color: #174f83;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.ticker-window {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-text {
+    display: inline-block;
+    padding-left: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    animation: scroll-message 28s linear infinite;
+}
+
+@keyframes scroll-message {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.announcement-bar:hover .ticker-text {
+    animation-play-state: paused;
+}
+
+/* Campus image and heading area */
+.hero {
+    min-height: 590px;
+    position: relative;
+    color: white;
+    background-image: url("jain-campus.png");
+    background-size: cover;
+    background-position: center 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(5, 27, 58, 0.82), rgba(8, 48, 91, 0.48)),
+                linear-gradient(0deg, rgba(5, 27, 58, 0.55), transparent 65%);
+}
+
+.top-nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 7%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    display: block;
+    margin-top: 3px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+
+.nav-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 86%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 0 75px;
+}
+
+.eyebrow, .section-tag, .degree-label {
+    color: #76b9ee;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero-content h1 {
+    max-width: 850px;
+    margin: 15px 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.12;
+}
+
+.hero-content h2 {
+    margin: 0 0 18px;
+    color: #c8e5ff;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.address {
+    color: #e0edf8;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.explore-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 20px;
+    color: #10365b;
+    background: #e6f3ff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.explore-link span {
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+.hero-bottom {
+    position: relative;
+    z-index: 1;
+    padding: 15px 7%;
+    color: #d7eaff;
+    background: rgba(4, 25, 52, 0.45);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* Main programme content */
+main {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.intro-section {
+    padding: 65px 10px 35px;
+    text-align: center;
+}
+
+.section-tag {
+    color: #4788bf;
+}
+
+.intro-section h2 {
+    margin: 12px 0;
+    color: #153d68;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+}
+
+.section-description {
+    max-width: 650px;
+    margin: auto;
+    color: #627991;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.programme-section {
+    padding: 25px 0 55px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 22px;
+}
+
+.degree-label {
+    color: #4a8fc5;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.section-heading h2, .postgraduate h2 {
+    margin: 8px 0 0;
+    color: #173f6c;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 29px;
+}
+
+.section-heading > p {
+    max-width: 360px;
+    margin: 0 0 4px;
+    color: #6b8096;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.course-card {
+    padding: 28px;
+    background: white;
+    border: 1px solid #d9e6f2;
+    border-top: 4px solid #5798cf;
+    border-radius: 12px;
+    box-shadow: 0 7px 22px rgba(24, 66, 105, 0.07);
+}
+
+.course-card.featured {
+    border-top-color: #174f83;
+}
+
+.course-icon {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #1d5689;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.course-card h3 {
+    margin: 15px 0 18px;
+    color: #1a4773;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+}
+
+.course-card ul {
+    margin: 0;
+    padding-left: 20px;
+    columns: 1;
+}
+
+.course-card li {
+    margin-bottom: 10px;
+    padding-left: 4px;
+    color: #506a84;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.course-card li::marker {
+    color: #4b96d0;
+}
+
+/* M.Tech section */
+.postgraduate {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 55px;
+    padding: 30px;
+    background: #e2effb;
+    border: 1px solid #c8def1;
+    border-radius: 12px;
+}
+
+.postgrad-number {
+    display: flex;
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #214f7d;
+    border-radius: 50%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+}
+
+.postgraduate p {
+    max-width: 800px;
+    margin: 10px 0 0;
+    color: #58718a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 25px 10px;
+    color: #e8f3ff;
+    background: #12385f;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 4px;
+}
+
+.footer-small {
+    color: #b6cde2;
+    font-size: 11px;
+}
+
+@media (max-width: 760px) {
+    .announcement-bar {
+        gap: 10px;
+        margin: 14px 6% 0;
+        padding: 10px;
+    }
+
+    .announcement-label {
+        font-size: 9px;
+    }
+
+    .ticker-text {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .top-nav {
+        padding: 20px 6%;
+    }
+
+    .nav-label {
+        max-width: 150px;
+        line-height: 1.5;
+    }
+
+    .hero-content {
+        width: 88%;
+        padding: 55px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 37px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 12px;
+    }
+
+    .intro-section h2 {
+        font-size: 29px;
+    }
+
+    .postgraduate {
+        align-items: flex-start;
+        padding: 22px;
+    }
+}

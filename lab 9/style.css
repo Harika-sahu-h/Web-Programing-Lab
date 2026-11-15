@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    color: #343a36;
+    background: #f3f5f1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 34px;
+    background: #ffffff;
+    border: 1px solid #dce4dc;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(40, 55, 45, 0.08);
+}
+
+.tag {
+    margin: 0 0 8px;
+    color: #66836d;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0 0 10px;
+    color: #2f4435;
+    font-size: 32px;
+}
+
+.subtitle {
+    margin: 0;
+    color: #68736b;
+    line-height: 1.6;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button, .file-button {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 1px solid #6f8f75;
+    border-radius: 5px;
+    background: #6f8f75;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.file-button {
+    background: #ffffff;
+    color: #52705a;
+}
+
+button:hover { background: #58765f; }
+.file-button:hover { background: #edf3ed; }
+
+button:focus-visible, .file-button:focus-visible {
+    outline: 3px solid #b9cfbd;
+    outline-offset: 2px;
+}
+
+#xmlFile {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+#status {
+    margin: 20px 0;
+    color: #68736b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.table-wrapper { overflow-x: auto; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    color: #343a36;
+}
+
+table[hidden] { display: none; }
+
+th {
+    background: #e8efe8;
+    color: #344b39;
+    text-align: left;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 14px 13px;
+    border: 1px solid #dfe6df;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) { background: #f7f9f6; }
+tbody tr:hover { background: #eef4ee; }
+
+.footer-note {
+    margin: 20px 0 0;
+    color: #7a847c;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .container { padding: 24px 16px; }
+    h1 { font-size: 27px; }
+    th, td { padding: 10px 8px; font-size: 12px; }
+}

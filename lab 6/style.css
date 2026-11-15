@@ -1,0 +1,490 @@
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #173d3a;
+    background: #f6f1e6;
+}
+
+/* Large background image section */
+.hero {
+    min-height: 650px;
+    position: relative;
+    color: white;
+    background-image: linear-gradient(90deg, rgba(5, 43, 40, 0.88), rgba(5, 43, 40, 0.25)),
+                      url("chhattisgarh-hero.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: rgba(5, 43, 40, 0.58);
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    display: block;
+    margin-top: 4px;
+    color: #e9c99b;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #f3bd79;
+}
+
+.hero-content {
+    width: 86%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 0 90px;
+}
+
+.eyebrow, .section-label {
+    color: #c68b53;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 15px 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 0.98;
+}
+
+.hero h1 span {
+    color: #f2c38c;
+}
+
+.hero h2 {
+    margin: 20px 0 12px;
+    color: #e4f0e9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.hero-description {
+    max-width: 500px;
+    color: #e0ebe5;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 14px 22px;
+    color: #173d3a;
+    background: #f0bd7c;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero-button span {
+    margin-left: 15px;
+}
+
+.image-caption {
+    position: absolute;
+    right: 6%;
+    bottom: 16px;
+    color: #edf4ef;
+    font-size: 11px;
+}
+
+/* Highlights strip */
+.feature-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 24px 7%;
+    background: #fffaf0;
+    border-bottom: 1px solid #e6ddca;
+}
+
+.feature-strip div {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    align-items: center;
+    column-gap: 10px;
+    border-right: 1px solid #d8d0bd;
+}
+
+.feature-strip div:last-child {
+    border-right: none;
+}
+
+.feature-strip span {
+    grid-row: span 2;
+    font-size: 26px;
+}
+
+.feature-strip strong {
+    color: #174c45;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+}
+
+.feature-strip small {
+    margin-top: 4px;
+    color: #7b8174;
+    font-size: 11px;
+}
+
+/* Main content */
+main {
+    width: 88%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    gap: 35px;
+    align-items: center;
+    padding: 75px 0 65px;
+}
+
+.about-text h2, .section-heading h2, .facts-section h2 {
+    margin: 10px 0 16px;
+    color: #164b43;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+}
+
+.about-text p:not(.section-label) {
+    color: #596f66;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.quote-card {
+    padding: 30px;
+    color: #f9f4e9;
+    background: #14564d;
+    border: 2px solid #d5a36c;
+    border-radius: 14px;
+    box-shadow: 8px 8px 0 #e8d8bc;
+}
+
+.quote-mark {
+    color: #f0bd7c;
+    font-family: Georgia, serif;
+    font-size: 50px;
+    line-height: 0.7;
+}
+
+.quote-card p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    line-height: 1.35;
+}
+
+.quote-card small {
+    color: #e8c99d;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* Attraction cards */
+.places-section {
+    padding: 35px 0 75px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 8px;
+}
+
+.section-heading > p:last-child {
+    color: #758178;
+    font-size: 14px;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.place-card {
+    overflow: hidden;
+    background: #fffdf7;
+    border: 1px solid #e3d9c8;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(26, 66, 56, 0.09);
+}
+
+.place-card img {
+    display: block;
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+
+.place-info {
+    padding: 20px;
+}
+
+.place-type {
+    color: #b47743;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.place-info h3 {
+    margin: 10px 0;
+    color: #164b43;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+}
+
+.place-info p {
+    color: #68786f;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.place-info .fact {
+    padding: 10px;
+    color: #355c50;
+    background: #edf3e9;
+    border-left: 3px solid #b9824e;
+    border-radius: 3px;
+}
+
+/* Extra experiences */
+.more-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 70px;
+}
+
+.more-card {
+    padding: 28px;
+    background: #e5eee4;
+    border: 1px solid #c9d9ca;
+    border-radius: 12px;
+}
+
+.more-card.warm {
+    background: #f4e6d4;
+    border-color: #e7d0b4;
+}
+
+.more-card h2 {
+    margin: 8px 0;
+    color: #174b43;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+}
+
+.more-card p:last-child {
+    color: #60746a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Quick facts panel */
+.facts-section {
+    margin-bottom: 60px;
+    padding: 35px;
+    background: #104d45;
+    border: 2px solid #d4a16a;
+    border-radius: 14px;
+}
+
+.facts-section .section-label {
+    color: #e8bd87;
+}
+
+.facts-section h2 {
+    margin-top: 8px;
+    color: #fff8e9;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.fact-box {
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+}
+
+.fact-box span {
+    display: block;
+    margin-bottom: 8px;
+    color: #e9c99d;
+    font-size: 12px;
+}
+
+.fact-box strong {
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+}
+
+.travel-note {
+    margin-bottom: 65px;
+    padding: 28px;
+    background: #fffaf0;
+    border-left: 5px solid #c58a55;
+    border-radius: 7px;
+}
+
+.travel-note h2 {
+    margin: 0 0 10px;
+    color: #174b43;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.travel-note p {
+    margin: 0;
+    color: #65756c;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+footer {
+    padding: 35px 20px;
+    color: #eaf1e9;
+    background: #0c3935;
+    text-align: center;
+}
+
+footer h2 {
+    margin: 0 0 8px;
+    color: #f1c48f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 13px;
+}
+
+footer small {
+    color: #afc7bb;
+    font-size: 11px;
+}
+
+@media (max-width: 800px) {
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .feature-strip {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .navbar {
+        display: block;
+    }
+
+    .nav-links {
+        margin-top: 16px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        min-height: 620px;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        padding-top: 85px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .feature-strip {
+        padding: 20px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .places-grid, .more-section, .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2, .section-heading h2, .facts-section h2 {
+        font-size: 29px;
+    }
+
+    .image-caption {
+        left: 6%;
+        right: auto;
+    }
+}

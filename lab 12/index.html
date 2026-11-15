@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="site">
+        <header class="header">
+            <div class="page-label">AGE CHECK</div>
+            <div class="secure"><i></i> Secure verification</div>
+        </header>
+
+        <section class="content">
+            <div class="intro">
+                <div class="eyebrow">AGE VERIFICATION</div>
+                <h1>Let's make sure<br>you're <span>eligible.</span></h1>
+                <p>Enter your name and age to check whether you meet the minimum age requirement.</p>
+                <div class="age-note">
+                    <div class="age-number">18<span>+</span></div>
+                    <div>
+                        <strong>Minimum age</strong>
+                        <small>You must be 18 or older</small>
+                    </div>
+                </div>
+            </div>
+
+            <section class="form-card">
+                <div class="form-heading">
+                    <div class="form-icon">↗</div>
+                    <h2>Your details</h2>
+                    <p>Complete the fields below to continue.</p>
+                </div>
+
+                <form action="check_age.php" method="POST">
+                    <div class="field">
+                        <label for="name">FULL NAME</label>
+                        <input type="text" id="name" name="name"
+                               placeholder="Enter your full name"
+                               maxlength="100" autocomplete="name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="age">AGE</label>
+                        <input type="number" id="age" name="age"
+                               placeholder="Enter your age"
+                               min="1" max="120" required>
+                    </div>
+
+                    <button type="submit">Check eligibility <span>→</span></button>
+                </form>
+
+                <div class="form-foot"><span>▣</span> Your details are used only for this check.</div>
+            </section>
+        </section>
+
+        <footer class="footer">
+            <span>AGE VERIFICATION</span>
+            <span>A quick and simple verification.</span>
+        </footer>
+    </main>
+</body>
+</html>
